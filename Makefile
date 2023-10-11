@@ -53,7 +53,9 @@ test:
 	@echo "Running unit tests..."
 	pytest tests
 
-
+markdown:
+	@echo "Generating markdown files..."
+	sphinx-build -M markdown "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 ## update-version: Read the version number from VERSION file, it will look like A.B.C Increment the third (C) number by 1 and write it back to the VERSION file
 update-version:
@@ -70,9 +72,5 @@ generate-pyproject:
 	@echo "build-backend = 'setuptools.build_meta'" >> pyproject.toml
 
 .PHONY: clean check-packages sdist wheel upload-test upload install uninstall test update-version generate-pyproject markdown
-markdown:
-	@echo "Generating markdown files..."
-	<commands to generate markdown files>
-markdown:
-	@echo "Generating markdown files..."
-	sphinx-build -M markdown "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+
