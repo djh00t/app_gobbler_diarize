@@ -69,7 +69,10 @@ generate-pyproject:
 	@echo "requires = ['setuptools', 'wheel']" >> pyproject.toml
 	@echo "build-backend = 'setuptools.build_meta'" >> pyproject.toml
 
-.PHONY: clean check-packages sdist wheel upload-test upload install uninstall test update-version generate-pyproject
+.PHONY: clean check-packages sdist wheel upload-test upload install uninstall test update-version generate-pyproject markdown
 markdown:
 	@echo "Generating markdown files..."
 	<commands to generate markdown files>
+markdown:
+	@echo "Generating markdown files..."
+	sphinx-build -M markdown "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)

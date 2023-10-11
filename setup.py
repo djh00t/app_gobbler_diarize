@@ -3,7 +3,7 @@
 ### 
 from setuptools import setup, find_packages
 
-with open("<correct_path_to>/README.md", "r", encoding="utf-8") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 with open("VERSION", "r") as version_file:
