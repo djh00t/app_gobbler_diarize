@@ -70,3 +70,6 @@ generate-pyproject:
 	@echo "build-backend = 'setuptools.build_meta'" >> pyproject.toml
 
 .PHONY: clean check-packages sdist wheel upload-test upload install uninstall test update-version generate-pyproject
+markdown:
+	@echo "Generating markdown files..."
+	<commands to generate markdown files>

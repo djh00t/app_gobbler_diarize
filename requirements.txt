@@ -1,3 +1,4 @@
 boto3==1.20.0
 kafka-python==2.0.2
 klingon-file-manager
+klingon_file_manager
